@@ -1,0 +1,33 @@
+{
+  "name": "pizza-express",
+  "version": "1.0.0",
+  "description": "All the pizzza. All the time. suh dude.",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/joshuajhun/pizza-express.git"
+  },
+  "keywords": [
+    "express",
+    "pizza",
+    "food",
+    "node",
+    "express",
+    "javascript"
+  ],
+  "author": "Jhun de Andres",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joshuajhun/pizza-express/issues"
+  },
+  "homepage": "https://github.com/joshuajhun/pizza-express#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  },
+  "devDependencies": {
+    "mocha": "^2.4.5"
+  }
+}
