@@ -90,9 +90,10 @@ describe('Server', () => {
   it('should return a page that has the title of pizza',(done) =>{
     var pizza= app.locals.pizzas.testPizza
 
+    console.log(pizza)
     this.request.get('/pizzas/testPizza', (error, response) =>{
       if(error) {done(error);}
-      assert(respsonse.body.includes(pizza.name),
+      assert(response.body.includes(pizza.name),
               `"${response.body}" does not include "${pizza.name}".`);
       done();
     })
@@ -101,7 +102,7 @@ describe('Server', () => {
   it('should redirect the user to their new pizza', (done)=>{
     var payload = { pizza: fixtures.validPizza};
 
-    this.request.post('/pizzas', {from: payload}, (error, response) =>{
+    this.request.post('/pizzas', {form: payload}, (error, response) =>{
       if (error) {done(error);}
       var newPizzaId = Object.keys(app.locals.pizzas)[0];
       assert.equal(response.headers.location, '/pizzas/' + newPizzaId);
